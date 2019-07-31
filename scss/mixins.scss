@@ -1,10 +1,8 @@
 @mixin low-resolution {
     @media (max-width: 620px) { @content; }
   }
-  @mixin grid-brake-point {
-    @media (max-width: 1100px) { @content; }
-  }
-  @mixin footer-break-point {
-    @media (max-width: 740px) { @content; }
+ 
+  @mixin break-point($resolution) {
+    @media (max-width: $resolution) { @content; }
   }
  
