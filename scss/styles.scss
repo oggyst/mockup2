@@ -11,8 +11,7 @@ body
   margin: 0;
   min-width: 360px;
 
-  div.st-nav-bar 
-  {
+  div.st-nav-bar {
     min-height: 80px;
     width: 100%;
     background-color: $navigation-bar;
@@ -27,7 +26,11 @@ body
       z-index: 1;
       display: block;
       float: left;
-     
+      @include break-point (620px) 
+      {
+        margin: auto;
+        float: none;
+      }
     }
     div.st-nav-holder 
     {
@@ -36,8 +39,15 @@ body
       background-color: $navigation-bar;
       margin-right: 5%;
 
-      div 
+      @include break-point (620px) 
       {
+        width: 100%;
+        margin-right: 0px;
+        padding-top: 0px;
+        line-height: 40px;
+      }
+
+      div {
         display: inline-block;
         color: $text-color;
         margin: 0px 10px;
@@ -62,26 +72,31 @@ body
   }
   div.st-header-image 
   {
-    background-color: $header-image;
-    margin: 0px;
+    margin:auto;
+    max-width: 1000px;
+    height:400px;
+    padding-top:0;
+    width: 100%;
     text-align: center;
     overflow: hidden;
     position: relative;
-    margin:auto;
-    width:1000px;
-    height:400px;
+    background-color: $header-image;
+
+    @include break-point (1000px)
+    {
+      margin: 0px;
+      height:0px;
+      padding-top: 40%;
+    }
     p.st-description 
     {
-      text-decoration: none;
       margin: 0px;
       color: white;
-      font-size: 60px;
+      font-size: 40px;
       position: absolute;
-      padding-top: 40%;
       top: 0;
       left: 0;
       right: 0;
-      opacity:1;
       text-align: center;
       padding-top: 15%;
     }
@@ -98,12 +113,10 @@ body
     {
       margin: 5px auto;
       display: inline-block;
-      span 
-      {
+      span {
         height: 10px;
         width: 10px;
         border-radius: 50%;
-        opacity: 0.4;
         margin: 0px 5px;
         float: left;
       }
@@ -121,9 +134,16 @@ body
   {
     clear: both;
     padding: 0px;
-    margin: 0px;
+    max-width:1300px;
+    margin:auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    @include break-point (1220px)
+    {
+      grid-row: auto auto;
+      grid-template-columns: auto auto;
+    }
 
     div 
     {
@@ -157,7 +177,6 @@ body
     padding: 60px 0px;
     font-weight: 400;
     text-align: center;
-
     h1 
     {
       margin: 0px;
@@ -165,7 +184,6 @@ body
       font-weight:600;
     }
   }
-
   p 
   {
     margin-bottom: 0px;
@@ -177,18 +195,39 @@ body
     text-align: center;
     width: 100%;
     padding:15px 0px 35px;
-    h1{
+
+    h1
+    {
       font-size:30px;
       font-weight:600;
     }
+
     div.st-galery-images 
     {
       display: grid;
-      grid-template-columns: 240px 240px 240px 240px;
+      grid-template-columns: 250px 250px 250px 250px;
       margin: auto;
-      max-width: 1000px;
+      max-width: 1050px;
       text-align: center;
       grid-column-gap: 15px;
+
+      @include break-point (1100px) 
+      {
+        grid-row: auto auto;
+        grid-template-columns: 250px 250px;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        max-width: 550px;
+      }
+
+      @include break-point (740px) 
+      {
+        grid-row: auto auto auto auto;
+        grid-template-columns: 250px;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        max-width: 270px;
+      }
 
       div 
       {
@@ -231,11 +270,12 @@ body
     background-color: $text-background;
     margin-top: 25px;
     padding: 25px 0px 45px;
-    
-    h1{
+
+    h1
+    {
     font-size:30px;
     font-weight:600;
-  }
+    }
 
     div.st-span 
     {
@@ -247,7 +287,6 @@ body
         width: 10px;
         border-radius: 50%;
         margin: 0px 5px;
-        opacity: 0.5;
         float: left;
       }
       span.selected 
@@ -266,9 +305,22 @@ body
     width: 80%;
     margin: 20px 10%;
 
+    @include break-point (740px)
+    {
+      width: 100%;
+      margin: auto;
+    }
+
     p.st-copyrights
     {
       float: left;
+
+      @include break-point (740px)
+      {
+        float: left;
+        width: 100%;
+        text-align: center;
+      }
     }
 
     p.st-design-team 
@@ -276,8 +328,14 @@ body
       color: $st-footer-designer-color;
       font-weight: 700;
       float: right;
+
+      @include break-point (740px)
+      {
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin: 5px 0px;
+      }
     }
   }
 }
-
-@include break-point;
