@@ -12,7 +12,7 @@ body {
 body div.st-nav-bar {
   min-height: 80px;
   width: 100%;
-  background-color: black;
+  background-color: #162a3d;
   z-index: -1;
 }
 
@@ -36,7 +36,7 @@ body div.st-nav-bar img.st-logo {
 body div.st-nav-bar div.st-nav-holder {
   float: right;
   padding-top: 35px;
-  background-color: black;
+  background-color: #162a3d;
   margin-right: 5%;
 }
 
@@ -151,7 +151,7 @@ body div.st-grid {
 }
 
 body div.st-grid div {
-  margin: 30px 0px;
+  margin: 50px 0px;
   text-align: center;
 }
 
@@ -328,7 +328,7 @@ body div.st-footer p.st-copyrights {
 }
 
 body div.st-footer p.st-design-team {
-  color: #808660;
+  color: rgba(167, 196, 7, 0.979);
   font-weight: 700;
   float: right;
 }
