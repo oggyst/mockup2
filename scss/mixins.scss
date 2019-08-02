@@ -1,89 +1,78 @@
 @import "colors.scss";
 @mixin break-point() {
-  @media (max-width: 620px) 
-  {
-    div.st-nav-bar img.st-logo 
+    @media (max-width: 620px) 
     {
+      div.st-nav-bar img.st-logo 
+      {
+        margin: auto;
+        float: none;
+      }
+      body div.st-nav-bar div.st-nav-holder 
+      {
+        width: 100%;
+        margin-right: 0px;
+        padding-top: 0px;
+        line-height: 40px;
+      }
+    }
+
+    
+
+  @media (max-width: 740px) 
+  {
+    body div.st-footer 
+    {
+      width: 100%;
       margin: auto;
-      float: none;
+
+      p.st-design-team 
+      {
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin: 5px 0px;
+      }
+      p.st-copyrights 
+      {
+        float: left;
+        width: 100%;
+        text-align: center;
+      }
     }
-    body div.st-nav-bar div.st-nav-holder 
+  }
+
+  @media (max-width: 1100px) 
+  {
+    div.st-header-image
     {
-      width: 100%;
-      margin-right: 0px;
-      padding-top: 0px;
-      line-height: 40px;
+      width:100%;
+      min-width:360px;
+      height: 0px;
+      padding-top: 40%;
+      position: relative;
     }
   }
 
-  body div.st-gallery div.st-galery-images 
+  @media (max-width: 1100px) 
   {
-    grid-row: auto auto auto auto;
-    -ms-grid-columns: 240px;
-    grid-template-columns: 240px;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-    max-width: 270px;
-  }
-}
-
-@media (max-width: 740px) 
-{
-  body div.st-footer 
-  {
-    width: 100%;
-    margin: auto;
-
-    p.st-design-team 
+    body div.st-gallery div.st-galery-images 
     {
-      float: left;
-      width: 100%;
-      text-align: center;
-      margin: 5px 0px;
+      grid-row: auto auto;
+      -ms-grid-columns: 240px 240px;
+      grid-template-columns: 240px 240px;
+      grid-row-gap: 10px;
+      grid-column-gap: 10px;
+      max-width: 550px;
     }
-    p.st-copyrights 
+  }
+
+  @media (max-width: 1220px) 
+  {
+    body div.st-grid 
     {
-      float: left;
-      width: 100%;
-      text-align: center;
+      grid-row: auto auto;
+      -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
     }
-  }
-}
-
-@media (max-width: 1000px) 
-{
-  div.st-header-iamge
-  {
-    width: 100%;
-    background-color: $header-image;
-    margin: 0px;
-    text-align: center;
-    overflow: hidden;
-    height: 0px;
-    padding-top: 40%;
-    position: relative;
-  }
-}
-
-@media (max-width: 1100px) 
-{
-  body div.st-gallery div.st-galery-images 
-  {
-    grid-row: auto auto;
-    -ms-grid-columns: 240px 240px;
-    grid-template-columns: 240px 240px;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-    max-width: 550px;
-  }
-}
-
-@media (max-width: 1220px) 
-{
-  body div.st-grid 
-  {
-    grid-row: auto auto;
-    -ms-grid-columns: auto auto;
-    grid-template-columns: auto auto;
   }
 }

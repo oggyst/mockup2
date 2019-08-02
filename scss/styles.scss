@@ -70,7 +70,6 @@ body
     margin:auto;
     width:1000px;
     height:400px;
-
     p.st-description 
     {
       text-decoration: none;
@@ -187,7 +186,7 @@ body
       display: grid;
       grid-template-columns: 240px 240px 240px 240px;
       margin: auto;
-      max-width: 1050px;
+      max-width: 1000px;
       text-align: center;
       grid-column-gap: 15px;
 
@@ -231,7 +230,7 @@ body
     width: 100%;
     background-color: $text-background;
     margin-top: 25px;
-    padding: 25px 0px 35px;
+    padding: 25px 0px 45px;
     
     h1{
     font-size:30px;
@@ -280,3 +279,5 @@ body
     }
   }
 }
+
+@include break-point;
