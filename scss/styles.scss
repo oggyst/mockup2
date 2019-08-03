@@ -205,16 +205,19 @@ body
     div.st-galery-images 
     {
       display: grid;
-      grid-template-columns: 250px 250px 250px 250px;
+      grid-template-columns: 240px 240px 240px 240px;
       margin: auto;
       max-width: 1050px;
       text-align: center;
       grid-column-gap: 15px;
+      
+      @include break-point (740px) 
+      {width:240px;}
 
       @include break-point (1100px) 
       {
         grid-row: auto auto;
-        grid-template-columns: 250px 250px;
+        grid-template-columns: 240px 240px;
         grid-row-gap: 10px;
         grid-column-gap: 10px;
         max-width: 550px;
@@ -223,7 +226,7 @@ body
       @include break-point (740px) 
       {
         grid-row: auto auto auto auto;
-        grid-template-columns: 250px;
+        grid-template-columns: 240px;
         grid-row-gap: 10px;
         grid-column-gap: 10px;
         max-width: 270px;
