@@ -2,4 +2,29 @@
   @mixin break-point($resolution) {
     @media (max-width: $resolution) { @content; }
   }
- 
+  @mixin set-size($width, $height) {
+    width: $width;
+    height: $height;
+  }
+  @mixin remove-default ()
+  {
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  @mixin clearfix ()
+  {
+    &::before, &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+  @mixin use-local-font($font, $filename)
+  {
+    @font-face{
+      font-family:$font;
+      src: url('/font/' + $filename);
+    }
+    
+  }

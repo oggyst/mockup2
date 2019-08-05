@@ -1,9 +1,12 @@
 @import "colors.scss";
 @import "mixins.scss";
+
+@include use-local-font('actor', 'Actor-Regular.ttf');
+
 html 
 {
   height: 100%;
-  font-family: 'Times New Roman', Times, serif
+  font-family: actor;
 }
 body 
 {
@@ -73,7 +76,6 @@ body
   div.st-header-image 
   {
     margin:auto;
-    max-width: 1000px;
     height:400px;
     padding-top:0;
     width: 100%;
@@ -90,15 +92,20 @@ body
     }
     p.st-description 
     {
-      margin: 0px;
+      position:relative;
+      top:135px;
       color: white;
       font-size: 40px;
+      @include break-point (1000px)
+    {
+      margin: 0px;
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       text-align: center;
       padding-top: 15%;
+    }
     }
   }
   div.st-carousel 

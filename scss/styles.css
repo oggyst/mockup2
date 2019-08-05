@@ -1,6 +1,11 @@
+@font-face {
+  font-family: "actor";
+  src: url("/font/Actor-Regular.ttf");
+}
+
 html {
   height: 100%;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: actor;
 }
 
 body {
@@ -72,7 +77,6 @@ body div.st-nav-bar div.st-nav-holder div.st-company {
 
 body div.st-header-image {
   margin: auto;
-  max-width: 1000px;
   height: 400px;
   padding-top: 0;
   width: 100%;
@@ -91,15 +95,22 @@ body div.st-header-image {
 }
 
 body div.st-header-image p.st-description {
-  margin: 0px;
+  position: relative;
+  top: 135px;
   color: white;
   font-size: 40px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding-top: 15%;
+}
+
+@media (max-width: 1000px) {
+  body div.st-header-image p.st-description {
+    margin: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-top: 15%;
+  }
 }
 
 body div.st-carousel {
